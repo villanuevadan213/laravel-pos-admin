@@ -64,3 +64,65 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+## 🚀 Setting Up the Project (For New Developers)
+
+### **1. Navigate to the Project Directory**
+```sh
+cd laravel-pos-admin
+code .
+```
+
+### **2. Install Composer Dependencies**
+```sh
+composer install
+```
+
+### **3. Create and Configure the `.env` File**
+```sh
+cp .env.example .env
+```
+Then, update database settings in `.env`:
+
+```ini
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=(name of db)
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### **4. Generate Application Key**
+```sh
+php artisan key:generate
+```
+
+### **5. Run Database Migrations**
+```sh
+php artisan migrate
+```
+
+### **6. Install Node.js Dependencies (For Frontend)**
+```sh
+npm install
+npm run dev
+```
+
+### **7. Clear Cache and Configurations**
+```sh
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+php artisan view:clear
+```
+
+### **8. Start the Development Server**
+```sh
+php artisan serve
+```
+
+Now, open your browser and visit:  
+👉 `http://127.0.0.1:8000`
